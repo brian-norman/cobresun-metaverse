@@ -43,12 +43,11 @@ func _player_connected(id):
 
 # Callback from SceneTree.
 func _player_disconnected(id):
-	if has_node("/root/World"): # Game is in progress.
-		if get_tree().is_network_server():
-			emit_signal("game_error", "Player " + players[id] + " disconnected")
-			end_game()
-	else: # Game is not in progress.
-		# Unregister this player.
+	print("Player disconnected")
+	if get_tree().is_network_server():
+		emit_signal("game_error", "Player " + players[id] + " disconnected")
+		end_game()
+	else:
 		unregister_player(id)
 
 
@@ -72,12 +71,12 @@ func _connected_fail():
 
 remote func register_player(new_player_name):
 	var id = get_tree().get_rpc_sender_id()
-	print(id)
 	players[id] = new_player_name
 	emit_signal("player_list_changed")
 
 
 func unregister_player(id):
+	print("Unregistering player")
 	players.erase(id)
 	emit_signal("player_list_changed")
 
