@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/night-on-the-docks---sax-by-kevin-macleod-from-filmmusic-io.mp3-cca9c1450b1ea4ac9940d3e17cf85ef8.mp3str"
+
+[deps]
+
+source_file="res://assets/night-on-the-docks---sax-by-kevin-macleod-from-filmmusic-io.mp3"
+dest_files=[ "res://.import/night-on-the-docks---sax-by-kevin-macleod-from-filmmusic-io.mp3-cca9c1450b1ea4ac9940d3e17cf85ef8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
