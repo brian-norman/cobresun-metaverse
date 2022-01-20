@@ -45,6 +45,13 @@ func _physics_process(delta):
 		position = puppet_pos
 		velocity = puppet_velocity
 	
+	if velocity.x < 0:
+		$AnimatedSprite.play("left")
+	elif velocity.x > 0:
+		$AnimatedSprite.play("right")
+	else:
+		$AnimatedSprite.play("idle")
+	
 	velocity = move_and_slide(velocity, upDirection)
 	
 	if not is_network_master():
