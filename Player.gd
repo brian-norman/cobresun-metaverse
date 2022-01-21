@@ -4,6 +4,8 @@ export (int) var run_speed = 100
 export (int) var jump_speed = -400
 export (int) var gravity = 1200
 
+export (PackedScene) var Emote
+
 var velocity = Vector2()
 var jumping = false
 
@@ -15,6 +17,21 @@ puppet var puppet_velocity = Vector2()
 
 func _ready():
 	puppet_pos = position
+
+
+remotesync func emote(pos, by_who):
+	print("creating emote")
+	var emote = Emote.instance()
+	emote.set_name(str(by_who))
+	add_child(emote)
+	emote.position = pos
+
+
+func _input(ev):
+	if is_network_master():
+		var just_pressed = ev.is_pressed() and not ev.is_echo()
+		if Input.is_key_pressed(KEY_E) and just_pressed:
+			rpc("emote", $EmoteSpawn.position, get_tree().get_network_unique_id())
 
 
 func get_input():
