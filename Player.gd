@@ -19,19 +19,21 @@ func _ready():
 	puppet_pos = position
 
 
-remotesync func emote(pos, by_who):
-	print("creating emote")
+remotesync func emote(pos, by_who, emotion):
 	var emote = Emote.instance()
 	emote.set_name(str(by_who))
-	add_child(emote)
 	emote.position = pos
+	emote.emotion = emotion
+	add_child(emote)
 
 
 func _input(ev):
 	if is_network_master():
 		var just_pressed = ev.is_pressed() and not ev.is_echo()
-		if Input.is_key_pressed(KEY_E) and just_pressed:
-			rpc("emote", $EmoteSpawn.position, get_tree().get_network_unique_id())
+		if Input.is_key_pressed(KEY_1) and just_pressed:
+			rpc("emote", $EmoteSpawn.position, get_tree().get_network_unique_id(), "smile")
+		if Input.is_key_pressed(KEY_2) and just_pressed:
+			rpc("emote", $EmoteSpawn.position, get_tree().get_network_unique_id(), "frown")
 
 
 func get_input():
