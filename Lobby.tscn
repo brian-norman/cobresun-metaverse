@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Lobby.gd" type="Script" id=1]
 [ext_resource path="res://typewriter.tres" type="DynamicFont" id=2]
+[ext_resource path="res://PlayerList.gd" type="Script" id=3]
 
 [node name="Lobby" type="Control"]
 anchor_left = 0.5
@@ -41,22 +42,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Name" type="LineEdit" parent="Connect"]
+[node name="Name" type="ItemList" parent="Connect"]
 margin_left = 35.0
-margin_top = 75.0
+margin_top = 76.0
 margin_right = 409.0
-margin_bottom = 99.0
+margin_bottom = 244.0
 custom_fonts/font = ExtResource( 2 )
-placeholder_text = "Enter Your Name"
+auto_height = true
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="IpLabel" type="Label" parent="Connect"]
-margin_left = 35.0
-margin_top = 156.0
-margin_right = 117.0
-margin_bottom = 195.0
+margin_left = 41.0
+margin_top = 267.0
+margin_right = 123.0
+margin_bottom = 306.0
 custom_fonts/font = ExtResource( 2 )
 text = "IP:"
 __meta__ = {
@@ -64,10 +66,10 @@ __meta__ = {
 }
 
 [node name="IPAddress" type="LineEdit" parent="Connect"]
-margin_left = 35.0
-margin_top = 205.0
-margin_right = 409.0
-margin_bottom = 254.0
+margin_left = 41.0
+margin_top = 316.0
+margin_right = 415.0
+margin_bottom = 365.0
 custom_fonts/font = ExtResource( 2 )
 text = "127.0.0.1"
 __meta__ = {
@@ -86,10 +88,10 @@ __meta__ = {
 }
 
 [node name="Join" type="Button" parent="Connect"]
-margin_left = 487.0
-margin_top = 205.0
-margin_right = 567.0
-margin_bottom = 250.0
+margin_left = 489.0
+margin_top = 145.0
+margin_right = 570.0
+margin_bottom = 190.0
 custom_fonts/font = ExtResource( 2 )
 text = "Join"
 __meta__ = {

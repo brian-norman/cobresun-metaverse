@@ -8,17 +8,10 @@ func _ready():
 	gamestate.connect("player_list_changed", self, "refresh_lobby")
 	gamestate.connect("game_ended", self, "_on_game_ended")
 	gamestate.connect("game_error", self, "_on_game_error")
-	
-	# Set the player name according to the system username. Fallback to the path.
-	if OS.has_environment("USERNAME"):
-		$Connect/Name.text = OS.get_environment("USERNAME")
-	else:
-		var desktop_path = OS.get_system_dir(0).replace("\\", "/").split("/")
-		$Connect/Name.text = desktop_path[desktop_path.size() - 2]
 
 
 func _on_Host_pressed():
-	if $Connect/Name.text == "":
+	if $Connect/Name.get_selected_name() == "":
 		$Connect/ErrorLabel.text = "Invalid name!"
 		return
 
@@ -26,13 +19,13 @@ func _on_Host_pressed():
 	$Players.show()
 	$Connect/ErrorLabel.text = ""
 
-	var player_name = $Connect/Name.text
+	var player_name = $Connect/Name.get_selected_name()
 	gamestate.host_game(player_name)
 	refresh_lobby()
 
 
 func _on_Join_pressed():
-	if $Connect/Name.text == "":
+	if $Connect/Name.get_selected_name() == "":
 		$Connect/ErrorLabel.text = "Invalid name!"
 		return
 
@@ -45,7 +38,7 @@ func _on_Join_pressed():
 	$Connect/Host.disabled = true
 	$Connect/Join.disabled = true
 
-	var player_name = $Connect/Name.text
+	var player_name = $Connect/Name.get_selected_name()
 	gamestate.join_game(ip, player_name)
 
 

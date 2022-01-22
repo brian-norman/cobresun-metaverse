@@ -65,11 +65,11 @@ func _physics_process(delta):
 		velocity = puppet_velocity
 	
 	if velocity.x < 0:
-		$AnimatedSprite.play("left")
+		$AnimatedSprite.play("%s-left" % $Name.text)
 	elif velocity.x > 0:
-		$AnimatedSprite.play("right")
+		$AnimatedSprite.play("%s-right" % $Name.text)
 	else:
-		$AnimatedSprite.play("idle")
+		$AnimatedSprite.play("%s-idle" % $Name.text)
 	
 	velocity = move_and_slide(velocity, upDirection)
 	
