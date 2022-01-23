@@ -34,6 +34,10 @@ func _input(ev):
 			rpc("emote", $EmoteSpawn.position, get_tree().get_network_unique_id(), "smile")
 		if Input.is_key_pressed(KEY_2) and just_pressed:
 			rpc("emote", $EmoteSpawn.position, get_tree().get_network_unique_id(), "frown")
+		if Input.is_key_pressed(KEY_3) and just_pressed:
+			rpc("emote", $EmoteSpawn.position, get_tree().get_network_unique_id(), "exclamation")
+		if Input.is_key_pressed(KEY_4) and just_pressed:
+			rpc("emote", $EmoteSpawn.position, get_tree().get_network_unique_id(), "plus one")
 
 
 func get_input():
