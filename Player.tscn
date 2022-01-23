@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/cole/cole-right.png" type="Texture" id=1]
 [ext_resource path="res://Player.gd" type="Script" id=2]
@@ -9,30 +9,26 @@
 [ext_resource path="res://assets/brian/brian-left.png" type="Texture" id=7]
 [ext_resource path="res://assets/brian/brian-idle.png" type="Texture" id=8]
 [ext_resource path="res://assets/cole/cole-idle.png" type="Texture" id=9]
+[ext_resource path="res://assets/wesley/wesley-idle.png" type="Texture" id=10]
+[ext_resource path="res://assets/wesley/wesley-right.png" type="Texture" id=11]
+[ext_resource path="res://assets/wesley/wesley-left.png" type="Texture" id=12]
+[ext_resource path="res://assets/sunny/sunny-right.png" type="Texture" id=13]
+[ext_resource path="res://assets/sunny/sunny-left.png" type="Texture" id=14]
+[ext_resource path="res://assets/sunny/sunny-idle.png" type="Texture" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 29, 62 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 13 ) ],
 "loop": true,
-"name": "brian-idle",
+"name": "sunny-right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 11 ) ],
 "loop": true,
-"name": "brian-right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "cole-left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "brian-left",
+"name": "wesley-right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ) ],
@@ -40,9 +36,49 @@ animations = [ {
 "name": "cole-right",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "cole-left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "brian-right",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "cole-idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "brian-idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "brian-left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "wesley-idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "sunny-idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "sunny-left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "wesley-left",
 "speed": 5.0
 } ]
 
@@ -58,7 +94,7 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
-animation = "brian-idle"
+animation = "sunny-right"
 
 [node name="Name" type="Label" parent="."]
 margin_left = -93.0
