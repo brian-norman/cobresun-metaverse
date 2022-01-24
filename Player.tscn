@@ -21,39 +21,9 @@ extents = Vector2( 29, 62 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "sunny-right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ) ],
-"loop": true,
-"name": "wesley-right",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "cole-right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "cole-left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "brian-right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "cole-idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "brian-idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
@@ -61,14 +31,19 @@ animations = [ {
 "name": "brian-left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "wesley-idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 15 ) ],
 "loop": true,
 "name": "sunny-idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "cole-left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "wesley-right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
@@ -76,13 +51,39 @@ animations = [ {
 "name": "sunny-left",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "brian-idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "cole-idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
 "name": "wesley-left",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "brian-right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "sunny-right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "wesley-idle",
+"speed": 5.0
 } ]
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 2
 script = ExtResource( 2 )
 run_speed = 400
 Emote = ExtResource( 6 )
