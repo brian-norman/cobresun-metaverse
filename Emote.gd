@@ -1,6 +1,9 @@
 extends AnimatedSprite
 
-var emotion = "smile"
+export (String) var emotion = "smile"
+
+# If set to true, the timer timeout won't be respected... aka this emoticon doesn't go away
+export (bool) var infinite = false
 
 
 func _ready():
@@ -8,4 +11,5 @@ func _ready():
 
 
 func _on_Timer_timeout():
-	queue_free()
+	if not infinite:
+		queue_free()
