@@ -3,11 +3,25 @@ extends Control
 
 func _ready():
 	# Called every time the node is added to the scene.
-	gamestate.connect("connection_failed", self, "_on_connection_failed")
-	gamestate.connect("connection_succeeded", self, "_on_connection_success")
-	gamestate.connect("player_list_changed", self, "refresh_lobby")
-	gamestate.connect("game_ended", self, "_on_game_ended")
-	gamestate.connect("game_error", self, "_on_game_error")
+	var connection_failed_error = gamestate.connect("connection_failed", self, "_on_connection_failed")
+	if connection_failed_error:
+		print(connection_failed_error)
+	
+	var connection_succeeded_error = gamestate.connect("connection_succeeded", self, "_on_connection_success")
+	if connection_succeeded_error:
+		print(connection_succeeded_error)
+	
+	var player_list_changed_error = gamestate.connect("player_list_changed", self, "refresh_lobby")
+	if player_list_changed_error:
+		print(player_list_changed_error)
+	
+	var game_ended_error = gamestate.connect("game_ended", self, "_on_game_ended")
+	if game_ended_error:
+		print(game_ended_error)
+	
+	var game_error_error = gamestate.connect("game_error", self, "_on_game_error")
+	if game_error_error:
+		print(game_error_error)
 
 
 func _on_Host_pressed():

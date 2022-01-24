@@ -28,11 +28,25 @@ signal game_error(what)
 
 
 func _ready():
-	get_tree().connect("network_peer_connected", self, "_player_connected")
-	get_tree().connect("network_peer_disconnected", self,"_player_disconnected")
-	get_tree().connect("connected_to_server", self, "_connected_ok")
-	get_tree().connect("connection_failed", self, "_connected_fail")
-	get_tree().connect("server_disconnected", self, "_server_disconnected")
+	var network_peer_connected_error = get_tree().connect("network_peer_connected", self, "_player_connected")
+	if network_peer_connected_error:
+		print(network_peer_connected_error)
+	
+	var network_peer_disconnected_error = get_tree().connect("network_peer_disconnected", self,"_player_disconnected")
+	if network_peer_disconnected_error:
+		print(network_peer_disconnected_error)
+	
+	var connected_to_server_error = get_tree().connect("connected_to_server", self, "_connected_ok")
+	if connected_to_server_error:
+		print(connected_to_server_error)
+	
+	var connection_failed_error = get_tree().connect("connection_failed", self, "_connected_fail")
+	if connection_failed_error:
+		print(connection_failed_error)
+	
+	var server_disconnected_error = get_tree().connect("server_disconnected", self, "_server_disconnected")
+	if server_disconnected_error:
+		print(server_disconnected_error)
 
 
 # Callback from SceneTree.
