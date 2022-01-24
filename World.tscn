@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://World.gd" type="Script" id=1]
 [ext_resource path="res://assets/Tile32.png" type="Texture" id=2]
 [ext_resource path="res://assets/night-on-the-docks---sax-by-kevin-macleod-from-filmmusic-io.mp3" type="AudioStream" id=3]
-[ext_resource path="res://Emote.tscn" type="PackedScene" id=4]
-[ext_resource path="res://typewriter.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Settings.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
@@ -72,78 +71,4 @@ position = Vector2( 1646, 991 )
 
 [node name="Players" type="Node2D" parent="."]
 
-[node name="EmoteGuide" type="Node" parent="."]
-
-[node name="Smile" parent="EmoteGuide" instance=ExtResource( 4 )]
-position = Vector2( 1632, 96 )
-animation = "smile"
-infinite = true
-
-[node name="SmileLabel" type="Label" parent="EmoteGuide"]
-margin_left = 1616.0
-margin_top = 128.0
-margin_right = 1656.0
-margin_bottom = 167.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 5 )
-text = "1"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Frown" parent="EmoteGuide" instance=ExtResource( 4 )]
-position = Vector2( 1696, 96 )
-animation = "frown"
-emotion = "frown"
-infinite = true
-
-[node name="FrownLabel" type="Label" parent="EmoteGuide"]
-margin_left = 1680.0
-margin_top = 128.0
-margin_right = 1720.0
-margin_bottom = 167.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 5 )
-text = "2"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Exclamation" parent="EmoteGuide" instance=ExtResource( 4 )]
-position = Vector2( 1760, 96 )
-animation = "exclamation"
-emotion = "exclamation"
-infinite = true
-
-[node name="ExclamationLabel" type="Label" parent="EmoteGuide"]
-margin_left = 1744.0
-margin_top = 128.0
-margin_right = 1784.0
-margin_bottom = 167.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 5 )
-text = "3"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PlusOne" parent="EmoteGuide" instance=ExtResource( 4 )]
-position = Vector2( 1824, 96 )
-emotion = "plus one"
-infinite = true
-
-[node name="PlusOneLabel" type="Label" parent="EmoteGuide"]
-margin_left = 1808.0
-margin_top = 128.0
-margin_right = 1848.0
-margin_bottom = 167.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 5 )
-text = "4"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Settings" parent="." instance=ExtResource( 6 )]

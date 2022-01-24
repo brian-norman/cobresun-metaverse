@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://typewriter.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Emote.tscn" type="PackedScene" id=2]
+
+[node name="Settings" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 0.47451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EmoteGuide" type="Node2D" parent="."]
+
+[node name="Smile" parent="EmoteGuide" instance=ExtResource( 2 )]
+position = Vector2( 1632, 96 )
+animation = "smile"
+infinite = true
+
+[node name="SmileLabel" type="Label" parent="EmoteGuide"]
+margin_left = 1616.0
+margin_top = 128.0
+margin_right = 1656.0
+margin_bottom = 167.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Frown" parent="EmoteGuide" instance=ExtResource( 2 )]
+position = Vector2( 1696, 96 )
+animation = "frown"
+emotion = "frown"
+infinite = true
+
+[node name="FrownLabel" type="Label" parent="EmoteGuide"]
+margin_left = 1680.0
+margin_top = 128.0
+margin_right = 1720.0
+margin_bottom = 167.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "2"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exclamation" parent="EmoteGuide" instance=ExtResource( 2 )]
+position = Vector2( 1760, 96 )
+animation = "exclamation"
+emotion = "exclamation"
+infinite = true
+
+[node name="ExclamationLabel" type="Label" parent="EmoteGuide"]
+margin_left = 1744.0
+margin_top = 128.0
+margin_right = 1784.0
+margin_bottom = 167.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "3"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlusOne" parent="EmoteGuide" instance=ExtResource( 2 )]
+position = Vector2( 1824, 96 )
+emotion = "plus one"
+infinite = true
+
+[node name="PlusOneLabel" type="Label" parent="EmoteGuide"]
+margin_left = 1808.0
+margin_top = 128.0
+margin_right = 1848.0
+margin_bottom = 167.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "4"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
