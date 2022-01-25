@@ -5,9 +5,9 @@ var is_settings_open = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var error = get_tree().connect("network_peer_disconnected", self,"_player_disconnected")
-	if error:
-		print(error)
+	var network_peer_disconnected_error = get_tree().connect("network_peer_disconnected", self,"_player_disconnected")
+	if network_peer_disconnected_error:
+		print(network_peer_disconnected_error)
 	
 	$Settings.hide()
 
