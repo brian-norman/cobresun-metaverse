@@ -26,14 +26,9 @@ animations = [ {
 "name": "cole-right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ) ],
+"frames": [ ExtResource( 11 ) ],
 "loop": true,
-"name": "brian-left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 15 ) ],
-"loop": true,
-"name": "sunny-idle",
+"name": "wesley-right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -41,24 +36,29 @@ animations = [ {
 "name": "cole-left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
-"loop": true,
-"name": "wesley-right",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "sunny-left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 10 ) ],
 "loop": true,
-"name": "brian-idle",
+"name": "wesley-idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "sunny-idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "cole-idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "brian-idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ) ],
@@ -76,9 +76,9 @@ animations = [ {
 "name": "sunny-right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "wesley-idle",
+"name": "brian-left",
 "speed": 5.0
 } ]
 

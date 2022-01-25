@@ -25,3 +25,31 @@ func _input(event):
 	elif Input.is_key_pressed(KEY_ESCAPE) and just_pressed and is_settings_open:
 		$Settings.hide()
 		is_settings_open = false
+
+
+func _on_Settings_volume_changed(value):
+	var volume = 0
+	if value == 0:
+		volume = -51
+	elif value == 10:
+		volume = -30.8
+	elif value == 20:
+		volume = -22.4
+	elif value == 30:
+		volume = -17.1
+	elif value == 40:
+		volume= -13.1
+	elif value == 50:
+		volume = -10.0
+	elif value == 60:
+		volume = -7.4
+	elif value == 70:
+		volume =  -4.9
+	elif value == 80:
+		volume =  -3.2
+	elif value == 90:
+		volume = -1.3
+	else:
+		volume = 0
+	
+	$Music.volume_db = volume

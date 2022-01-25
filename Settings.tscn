@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://typewriter.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Emote.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Settings.gd" type="Script" id=3]
 
 [node name="Settings" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1920.0
@@ -88,3 +90,17 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Volume" type="HSlider" parent="."]
+margin_left = 1608.0
+margin_top = 200.0
+margin_right = 1856.0
+margin_bottom = 216.0
+step = 10.0
+value = 50.0
+tick_count = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="value_changed" from="Volume" to="." method="_on_Volume_value_changed"]
