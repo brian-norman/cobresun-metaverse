@@ -17,18 +17,53 @@
 [ext_resource path="res://assets/sunny/sunny-idle.png" type="Texture" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 43.5, 95 )
+extents = Vector2( 57, 125 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "sunny-right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "sunny-idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "brian-idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "sunny-left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "brian-right",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
 "name": "wesley-idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 12 ) ],
 "loop": true,
-"name": "cole-idle",
+"name": "wesley-left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "cole-left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "wesley-right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ) ],
@@ -41,44 +76,9 @@ animations = [ {
 "name": "brian-left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "wesley-right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "cole-left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "wesley-left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "brian-right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "sunny-left",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 15 ) ],
-"loop": true,
-"name": "sunny-idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "sunny-right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "brian-idle",
+"name": "cole-idle",
 "speed": 5.0
 } ]
 
@@ -89,12 +89,12 @@ run_speed = 400
 Emote = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -8, 35 )
+position = Vector2( 2, 5 )
 shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "sunny-right"
+animation = "brian-idle"
 
 [node name="Name" type="Label" parent="."]
 margin_left = -92.0
@@ -109,4 +109,4 @@ __meta__ = {
 }
 
 [node name="EmoteSpawn" type="Position2D" parent="."]
-position = Vector2( 55, -47 )
+position = Vector2( 59, -90 )
